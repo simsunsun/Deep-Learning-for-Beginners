@@ -62,7 +62,8 @@ def MnistConv(W1, W5, Wo, X, D):
             
             delta1_x = np.zeros_like(W1)            
             for c in range(20):
-                delta1_x[:, :, c] = signal.convolve2d(x[:, :], np.rot90(delta2[:, :, c], 2), 'valid')
+                delta1_x[:, :, c] = signal.convolve2d(x[:, :],
+                                                     np.rot90(delta2[:, :, c], 2), 'valid')
             
             
             dW1 = dW1 + delta1_x

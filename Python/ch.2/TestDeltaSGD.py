@@ -14,11 +14,12 @@ def TestDeltaSGD():
                   [1],
                   [1]])
         
-    W = 2*np.random.random((1, 3)) - 1
+    W = 2*np.random.random((1, 3)) -1
         
-    for _epoch in range(10000):
+    for _epoch in range(40000):
         W = DeltaSGD(W, X, D)
-                
+        # print(W)
+
     N = 4
     for k in range(N):
         x = X[k,:].T

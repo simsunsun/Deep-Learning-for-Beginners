@@ -10,7 +10,8 @@ from MnistConv import *
 
 # Learn
 #
-Images, Labels = LoadMnistData('MNIST\\t10k-images-idx3-ubyte.gz', 'MNIST\\t10k-labels-idx1-ubyte.gz')
+Images, Labels = LoadMnistData('/home/tang/catkin_ws/git-init-use/Deep-Learning-for-Beginners/Python/ch.6/MNIST/t10k-images-idx3-ubyte.gz',
+                                '/home/tang/catkin_ws/git-init-use/Deep-Learning-for-Beginners/Python/ch.6/MNIST/t10k-labels-idx1-ubyte.gz')
 Images = np.divide(Images, 255)
 
 W1 = 1e-2 * np.random.randn(9, 9, 20)
@@ -50,5 +51,3 @@ for k  in range(N):
         
 acc = acc / N
 print("Accuracy is : ", acc)
-
-
